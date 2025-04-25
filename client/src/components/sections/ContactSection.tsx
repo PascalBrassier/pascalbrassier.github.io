@@ -54,66 +54,84 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-16 bg-[#f5f5f5] border-t border-gray-200">
-      <div className="container">
-        <h2 className="text-2xl md:text-3xl font-bold text-[#0a3d62] mb-10 text-center">Contact</h2>
+    <section id="contact" className="py-20 bg-gradient-light relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute top-0 left-0 w-full h-full opacity-5 bg-noise-pattern"></div>
+      <div className="absolute top-40 left-0 w-96 h-96 bg-gradient-to-br from-secondary/20 to-transparent rounded-full filter blur-3xl -ml-48"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-primary/20 to-transparent rounded-full filter blur-3xl -mr-48 -mb-48"></div>
+      
+      <div className="container relative z-10">
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <span className="text-gradient">Contact</span>
+          </h2>
+          <div className="section-divider"></div>
+        </div>
         
         <div className="flex flex-col md:flex-row gap-10">
-          <Card className="md:w-1/2 bg-white p-8 rounded-lg shadow-md">
+          <Card className="md:w-1/2 bg-gradient-card rounded-xl shadow-card p-8 card-hover backdrop-blur-sm animate-slide-right">
             <CardContent className="p-0">
-              <h3 className="text-xl font-bold text-[#800020] mb-6">Coordonnées</h3>
+              <h3 className="text-2xl font-bold text-secondary mb-8 inline-block relative">
+                Coordonnées
+                <span className="absolute bottom-0 left-0 h-1 w-1/2 bg-gradient-to-r from-primary to-accent rounded-full"></span>
+              </h3>
               
-              <div className="space-y-6">
-                <div className="flex">
-                  <div className="mr-6 flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-[#0a3d62] text-white">
+              <div className="space-y-8">
+                <div className="flex group">
+                  <div className="mr-6 flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-lg bg-gradient shadow-md text-white group-hover:scale-110 transition-all duration-300">
                     <i className="fas fa-building"></i>
                   </div>
                   <div>
-                    <h4 className="font-bold mb-1">Adresse Professionnelle</h4>
-                    <p className="text-[#4a4a4a]">
-                      ESC Clermont Business School<br />
-                      4 Boulevard Trudaine<br />
+                    <h4 className="font-bold text-lg mb-2">Adresse Professionnelle</h4>
+                    <p className="text-foreground leading-relaxed">
+                      Université Clermont Auvergne<br />
+                      IAE Clermont Auvergne<br />
+                      11 Boulevard Charles de Gaulle<br />
                       63000 Clermont-Ferrand, France
                     </p>
                   </div>
                 </div>
                 
-                <div className="flex">
-                  <div className="mr-6 flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-[#0a3d62] text-white">
+                <div className="flex group">
+                  <div className="mr-6 flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-lg bg-gradient shadow-md text-white group-hover:scale-110 transition-all duration-300">
                     <i className="fas fa-envelope"></i>
                   </div>
                   <div>
-                    <h4 className="font-bold mb-1">Email</h4>
-                    <a href="mailto:pascal.brassier@esc-clermont.fr" className="text-[#0a3d62] hover:underline">
-                      pascal.brassier@esc-clermont.fr
+                    <h4 className="font-bold text-lg mb-2">Email</h4>
+                    <a href="mailto:pascal.brassier@uca.fr" className="text-primary hover:text-accent transition-colors duration-300">
+                      pascal.brassier@uca.fr
                     </a>
                   </div>
                 </div>
                 
-                <div className="flex">
-                  <div className="mr-6 flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-[#0a3d62] text-white">
+                <div className="flex group">
+                  <div className="mr-6 flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-lg bg-gradient shadow-md text-white group-hover:scale-110 transition-all duration-300">
                     <i className="fas fa-phone"></i>
                   </div>
                   <div>
-                    <h4 className="font-bold mb-1">Téléphone</h4>
-                    <p className="text-[#4a4a4a]">+33 (0)4 XX XX XX XX</p>
+                    <h4 className="font-bold text-lg mb-2">Téléphone</h4>
+                    <p className="text-foreground">+33 (0)4 XX XX XX XX</p>
                   </div>
                 </div>
                 
                 <div className="pt-4">
-                  <h4 className="font-bold mb-4">Réseaux Sociaux & Profils Académiques</h4>
-                  <div className="flex space-x-4">
-                    <a href="https://www.linkedin.com/in/pascalbrassier/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-[#0a3d62] text-white hover:bg-[#2c3e50] transition duration-300">
-                      <i className="fab fa-linkedin-in"></i>
+                  <h4 className="font-bold text-lg mb-4">Réseaux Sociaux & Profils Académiques</h4>
+                  <div className="flex flex-wrap gap-4">
+                    <a href="https://www.linkedin.com/in/pascalbrassier/" target="_blank" rel="noopener noreferrer" 
+                       className="w-12 h-12 flex items-center justify-center rounded-lg bg-gradient shadow-md text-white hover:scale-110 transition-all duration-300">
+                      <i className="fab fa-linkedin-in text-lg"></i>
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-[#0a3d62] text-white hover:bg-[#2c3e50] transition duration-300">
-                      <i className="fab fa-researchgate"></i>
+                    <a href="#" target="_blank" rel="noopener noreferrer" 
+                       className="w-12 h-12 flex items-center justify-center rounded-lg bg-gradient shadow-md text-white hover:scale-110 transition-all duration-300">
+                      <i className="fab fa-researchgate text-lg"></i>
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-[#0a3d62] text-white hover:bg-[#2c3e50] transition duration-300">
-                      <i className="fas fa-graduation-cap"></i>
+                    <a href="#" target="_blank" rel="noopener noreferrer" 
+                       className="w-12 h-12 flex items-center justify-center rounded-lg bg-gradient shadow-md text-white hover:scale-110 transition-all duration-300">
+                      <i className="fas fa-graduation-cap text-lg"></i>
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-[#0a3d62] text-white hover:bg-[#2c3e50] transition duration-300">
-                      <i className="fab fa-twitter"></i>
+                    <a href="#" target="_blank" rel="noopener noreferrer" 
+                       className="w-12 h-12 flex items-center justify-center rounded-lg bg-gradient shadow-md text-white hover:scale-110 transition-all duration-300">
+                      <i className="fab fa-twitter text-lg"></i>
                     </a>
                   </div>
                 </div>
@@ -121,9 +139,12 @@ const ContactSection = () => {
             </CardContent>
           </Card>
           
-          <Card className="md:w-1/2 bg-white p-8 rounded-lg shadow-md">
+          <Card className="md:w-1/2 bg-gradient-card rounded-xl shadow-card p-8 card-hover backdrop-blur-sm animate-slide-left">
             <CardContent className="p-0">
-              <h3 className="text-xl font-bold text-[#800020] mb-6">Formulaire de Contact</h3>
+              <h3 className="text-2xl font-bold text-secondary mb-8 inline-block relative">
+                Formulaire de Contact
+                <span className="absolute bottom-0 left-0 h-1 w-1/2 bg-gradient-to-r from-primary to-accent rounded-full"></span>
+              </h3>
               
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -132,15 +153,15 @@ const ContactSection = () => {
                     name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-[#4a4a4a] font-medium">Nom</FormLabel>
+                        <FormLabel className="text-foreground font-medium">Nom</FormLabel>
                         <FormControl>
                           <Input 
                             {...field} 
-                            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#0a3d62]"
+                            className="bg-white/70 backdrop-blur-sm border-border focus:border-primary focus:ring-primary/20"
                             placeholder="Votre nom" 
                           />
                         </FormControl>
-                        <FormMessage />
+                        <FormMessage className="text-secondary" />
                       </FormItem>
                     )}
                   />
@@ -150,16 +171,16 @@ const ContactSection = () => {
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-[#4a4a4a] font-medium">Email</FormLabel>
+                        <FormLabel className="text-foreground font-medium">Email</FormLabel>
                         <FormControl>
                           <Input 
                             {...field} 
                             type="email" 
-                            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#0a3d62]"
+                            className="bg-white/70 backdrop-blur-sm border-border focus:border-primary focus:ring-primary/20"
                             placeholder="Votre email" 
                           />
                         </FormControl>
-                        <FormMessage />
+                        <FormMessage className="text-secondary" />
                       </FormItem>
                     )}
                   />
@@ -169,15 +190,15 @@ const ContactSection = () => {
                     name="subject"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-[#4a4a4a] font-medium">Sujet</FormLabel>
+                        <FormLabel className="text-foreground font-medium">Sujet</FormLabel>
                         <FormControl>
                           <Input 
                             {...field} 
-                            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#0a3d62]"
+                            className="bg-white/70 backdrop-blur-sm border-border focus:border-primary focus:ring-primary/20"
                             placeholder="Sujet de votre message" 
                           />
                         </FormControl>
-                        <FormMessage />
+                        <FormMessage className="text-secondary" />
                       </FormItem>
                     )}
                   />
@@ -187,16 +208,16 @@ const ContactSection = () => {
                     name="message"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-[#4a4a4a] font-medium">Message</FormLabel>
+                        <FormLabel className="text-foreground font-medium">Message</FormLabel>
                         <FormControl>
                           <Textarea 
                             {...field} 
                             rows={5} 
-                            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#0a3d62]"
+                            className="bg-white/70 backdrop-blur-sm border-border focus:border-primary focus:ring-primary/20"
                             placeholder="Votre message" 
                           />
                         </FormControl>
-                        <FormMessage />
+                        <FormMessage className="text-secondary" />
                       </FormItem>
                     )}
                   />
@@ -204,9 +225,11 @@ const ContactSection = () => {
                   <Button 
                     type="submit" 
                     disabled={isPending}
-                    className="bg-[#0a3d62] text-white py-2 px-6 rounded-md hover:bg-[#2c3e50] transition duration-300 shadow-md"
+                    className="btn-fancy bg-gradient w-full mt-4"
                   >
-                    {isPending ? 'Envoi en cours...' : 'Envoyer le message'}
+                    <span className="relative z-10 px-2">
+                      {isPending ? 'Envoi en cours...' : 'Envoyer le message'}
+                    </span>
                   </Button>
                 </form>
               </Form>

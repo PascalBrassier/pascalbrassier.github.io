@@ -144,144 +144,224 @@ const TabsSection = () => {
         </div>
 
         {/* Publications Tab Content */}
-        <div className={activeTab === 'publications' ? 'block' : 'hidden'}>
-          <h2 id="publications" className="text-2xl md:text-3xl font-bold text-[#0a3d62] mb-8">Publications</h2>
-          
-          <div className="mb-8">
-            <h3 className="text-xl font-bold text-[#800020] mb-4">Articles dans des Revues Académiques</h3>
-            
-            <div className="space-y-6">
-              {publications.filter(pub => pub.type === 'article').map((publication, index) => (
-                <div className="publication-item pb-6" key={index}>
-                  <h4 className="font-bold text-lg mb-2">{publication.title}</h4>
-                  <p className="italic text-[#4a4a4a] mb-2">{publication.journal}, {publication.year}</p>
-                  <p className="text-[#4a4a4a] mb-3">{publication.description}</p>
-                  <div className="flex items-center space-x-4">
-                    {publication.pdfUrl && (
-                      <a href={publication.pdfUrl} className="text-[#0a3d62] hover:underline flex items-center" target="_blank" rel="noopener noreferrer">
-                        <i className="fas fa-file-pdf mr-2"></i> PDF
-                      </a>
-                    )}
-                    {publication.doiUrl && (
-                      <a href={publication.doiUrl} className="text-[#0a3d62] hover:underline flex items-center" target="_blank" rel="noopener noreferrer">
-                        <i className="fas fa-external-link-alt mr-2"></i> DOI
-                      </a>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
+        <div className={activeTab === 'publications' ? 'block animate-fade-in' : 'hidden'}>
+          <div className="mb-10">
+            <h2 id="publications" className="text-2xl md:text-3xl font-bold inline-block relative">
+              <span className="text-gradient">Publications Scientifiques</span>
+            </h2>
           </div>
           
-          <div className="mb-8">
-            <h3 className="text-xl font-bold text-[#800020] mb-4">Chapitres d'Ouvrages</h3>
-            
-            <div className="space-y-6">
-              {publications.filter(pub => pub.type === 'chapter').map((publication, index) => (
-                <div className="publication-item pb-6" key={index}>
-                  <h4 className="font-bold text-lg mb-2">{publication.title}</h4>
-                  <p className="italic text-[#4a4a4a] mb-2">Dans: {publication.journal}, {publication.year}</p>
-                  <p className="text-[#4a4a4a] mb-3">{publication.description}</p>
+          <div className="mb-12">
+            <Card className="bg-gradient-card shadow-card p-8 rounded-xl card-hover backdrop-blur-sm mb-8">
+              <CardContent className="p-0">
+                <h3 className="text-2xl font-bold text-secondary mb-8 inline-block relative">
+                  Articles dans des Revues Académiques
+                  <span className="absolute bottom-0 left-0 h-1 w-1/2 bg-gradient-to-r from-primary to-accent rounded-full"></span>
+                </h3>
+                
+                <div className="space-y-8">
+                  {publications.filter(pub => pub.type === 'article').map((publication, index) => (
+                    <div className="publication-item pb-6 border-b border-border last:border-none group" key={index}>
+                      <h4 className="font-bold text-xl mb-2 group-hover:text-accent transition-colors duration-300">{publication.title}</h4>
+                      <p className="italic text-muted-foreground mb-3">{publication.journal}, {publication.year}</p>
+                      <p className="text-foreground mb-4 leading-relaxed">{publication.description}</p>
+                      <div className="flex items-center space-x-4">
+                        {publication.pdfUrl && (
+                          <a href={publication.pdfUrl} className="text-primary hover:text-accent flex items-center transition-colors duration-300 group" 
+                             target="_blank" rel="noopener noreferrer">
+                            <span className="bg-primary/10 p-2 rounded-full mr-2 group-hover:bg-accent/10 transition-colors duration-300">
+                              <i className="fas fa-file-pdf text-primary group-hover:text-accent"></i>
+                            </span>
+                            PDF
+                          </a>
+                        )}
+                        {publication.doiUrl && (
+                          <a href={publication.doiUrl} className="text-primary hover:text-accent flex items-center transition-colors duration-300 group" 
+                             target="_blank" rel="noopener noreferrer">
+                            <span className="bg-primary/10 p-2 rounded-full mr-2 group-hover:bg-accent/10 transition-colors duration-300">
+                              <i className="fas fa-external-link-alt text-primary group-hover:text-accent"></i>
+                            </span>
+                            DOI
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              </CardContent>
+            </Card>
+          </div>
+          
+          <div className="mb-12">
+            <Card className="bg-gradient-card shadow-card p-8 rounded-xl card-hover backdrop-blur-sm mb-8">
+              <CardContent className="p-0">
+                <h3 className="text-2xl font-bold text-secondary mb-8 inline-block relative">
+                  Chapitres d'Ouvrages
+                  <span className="absolute bottom-0 left-0 h-1 w-1/2 bg-gradient-to-r from-primary to-accent rounded-full"></span>
+                </h3>
+                
+                <div className="space-y-8">
+                  {publications.filter(pub => pub.type === 'chapter').map((publication, index) => (
+                    <div className="publication-item pb-6 border-b border-border last:border-none group" key={index}>
+                      <h4 className="font-bold text-xl mb-2 group-hover:text-accent transition-colors duration-300">{publication.title}</h4>
+                      <p className="italic text-muted-foreground mb-3">Dans: {publication.journal}, {publication.year}</p>
+                      <p className="text-foreground leading-relaxed">{publication.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
           </div>
           
           <div>
-            <h3 className="text-xl font-bold text-[#800020] mb-4">Communications en Conférences</h3>
-            
-            <div className="space-y-6">
-              {publications.filter(pub => pub.type === 'conference').map((publication, index) => (
-                <div className="publication-item pb-6" key={index}>
-                  <h4 className="font-bold text-lg mb-2">{publication.title}</h4>
-                  <p className="italic text-[#4a4a4a] mb-2">{publication.journal}, {publication.year}</p>
+            <Card className="bg-gradient-card shadow-card p-8 rounded-xl card-hover backdrop-blur-sm">
+              <CardContent className="p-0">
+                <h3 className="text-2xl font-bold text-secondary mb-8 inline-block relative">
+                  Communications en Conférences
+                  <span className="absolute bottom-0 left-0 h-1 w-1/2 bg-gradient-to-r from-primary to-accent rounded-full"></span>
+                </h3>
+                
+                <div className="space-y-8">
+                  {publications.filter(pub => pub.type === 'conference').map((publication, index) => (
+                    <div className="publication-item pb-6 border-b border-border last:border-none group" key={index}>
+                      <h4 className="font-bold text-xl mb-2 group-hover:text-accent transition-colors duration-300">{publication.title}</h4>
+                      <p className="italic text-muted-foreground">{publication.journal}, {publication.year}</p>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
 
         {/* Teaching Tab Content */}
-        <div className={activeTab === 'teaching' ? 'block' : 'hidden'}>
-          <h2 id="teaching" className="text-2xl md:text-3xl font-bold text-[#0a3d62] mb-8">Activités d'Enseignement</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <div className="bg-[#f5f5f5] p-6 rounded-lg">
-              <h3 className="text-xl font-bold text-[#800020] mb-4">Cours enseignés</h3>
-              <ul className="space-y-4">
-                {courses.map((course, index) => (
-                  <li className="flex" key={index}>
-                    <div className="mr-4 flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-[#0a3d62] text-white">
-                      <i className="fas fa-book"></i>
-                    </div>
-                    <div>
-                      <p className="font-semibold">{course.title}</p>
-                      <p className="text-sm text-[#4a4a4a]">{course.level}, {course.institution}</p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            
-            <div className="bg-[#f5f5f5] p-6 rounded-lg">
-              <h3 className="text-xl font-bold text-[#800020] mb-4">Méthodes Pédagogiques</h3>
-              <p className="mb-6 text-[#4a4a4a]">
-                J'adopte une approche pédagogique mixte qui combine théorie et pratique, favorisant l'apprentissage actif 
-                et le développement des compétences professionnelles des étudiants.
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <div className="mr-3 text-[#0a3d62] mt-1"><i className="fas fa-check-circle"></i></div>
-                  <p>Études de cas réels et analyses sectorielles</p>
-                </li>
-                <li className="flex items-start">
-                  <div className="mr-3 text-[#0a3d62] mt-1"><i className="fas fa-check-circle"></i></div>
-                  <p>Projets de groupe avec des entreprises partenaires</p>
-                </li>
-                <li className="flex items-start">
-                  <div className="mr-3 text-[#0a3d62] mt-1"><i className="fas fa-check-circle"></i></div>
-                  <p>Simulations et jeux de rôle pour développer des compétences pratiques</p>
-                </li>
-                <li className="flex items-start">
-                  <div className="mr-3 text-[#0a3d62] mt-1"><i className="fas fa-check-circle"></i></div>
-                  <p>Intégration des technologies numériques et des médias sociaux</p>
-                </li>
-                <li className="flex items-start">
-                  <div className="mr-3 text-[#0a3d62] mt-1"><i className="fas fa-check-circle"></i></div>
-                  <p>Conférences de professionnels invités et témoignages d'experts</p>
-                </li>
-              </ul>
-            </div>
+        <div className={activeTab === 'teaching' ? 'block animate-fade-in' : 'hidden'}>
+          <div className="mb-10">
+            <h2 id="teaching" className="text-2xl md:text-3xl font-bold inline-block relative">
+              <span className="text-gradient">Activités d'Enseignement</span>
+            </h2>
           </div>
           
-          <Card className="bg-[#f5f5f5] p-8 rounded-lg">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <Card className="bg-gradient-card shadow-card p-8 rounded-xl card-hover backdrop-blur-sm">
+              <CardContent className="p-0">
+                <h3 className="text-2xl font-bold text-secondary mb-6 inline-block relative">
+                  Cours enseignés
+                  <span className="absolute bottom-0 left-0 h-1 w-1/2 bg-gradient-to-r from-primary to-accent rounded-full"></span>
+                </h3>
+                <ul className="space-y-5 mt-8">
+                  {courses.map((course, index) => (
+                    <li className="flex items-center group" key={index}>
+                      <div className="mr-5 flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-lg bg-gradient shadow-md text-white group-hover:scale-110 transition-all duration-300">
+                        <i className="fas fa-book text-lg"></i>
+                      </div>
+                      <div>
+                        <p className="font-semibold text-lg group-hover:text-accent transition-colors duration-300">{course.title}</p>
+                        <p className="text-muted-foreground">{course.level}, {course.institution}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-gradient-card shadow-card p-8 rounded-xl card-hover backdrop-blur-sm">
+              <CardContent className="p-0">
+                <h3 className="text-2xl font-bold text-secondary mb-6 inline-block relative">
+                  Méthodes Pédagogiques
+                  <span className="absolute bottom-0 left-0 h-1 w-1/2 bg-gradient-to-r from-primary to-accent rounded-full"></span>
+                </h3>
+                <p className="mb-8 text-foreground leading-relaxed">
+                  J'adopte une approche pédagogique mixte qui combine théorie et pratique, favorisant l'apprentissage actif 
+                  et le développement des compétences professionnelles des étudiants.
+                </p>
+                <ul className="space-y-4">
+                  <li className="flex items-start group">
+                    <div className="mr-4 flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-gradient shadow-sm group-hover:shadow-md text-white transition-all duration-300">
+                      <i className="fas fa-check text-sm"></i>
+                    </div>
+                    <p className="text-foreground pt-1 group-hover:text-accent transition-colors duration-300">Études de cas réels et analyses sectorielles</p>
+                  </li>
+                  <li className="flex items-start group">
+                    <div className="mr-4 flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-gradient shadow-sm group-hover:shadow-md text-white transition-all duration-300">
+                      <i className="fas fa-check text-sm"></i>
+                    </div>
+                    <p className="text-foreground pt-1 group-hover:text-accent transition-colors duration-300">Projets de groupe avec des entreprises partenaires</p>
+                  </li>
+                  <li className="flex items-start group">
+                    <div className="mr-4 flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-gradient shadow-sm group-hover:shadow-md text-white transition-all duration-300">
+                      <i className="fas fa-check text-sm"></i>
+                    </div>
+                    <p className="text-foreground pt-1 group-hover:text-accent transition-colors duration-300">Simulations et jeux de rôle pour développer des compétences pratiques</p>
+                  </li>
+                  <li className="flex items-start group">
+                    <div className="mr-4 flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-gradient shadow-sm group-hover:shadow-md text-white transition-all duration-300">
+                      <i className="fas fa-check text-sm"></i>
+                    </div>
+                    <p className="text-foreground pt-1 group-hover:text-accent transition-colors duration-300">Intégration des technologies numériques et des médias sociaux</p>
+                  </li>
+                  <li className="flex items-start group">
+                    <div className="mr-4 flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-gradient shadow-sm group-hover:shadow-md text-white transition-all duration-300">
+                      <i className="fas fa-check text-sm"></i>
+                    </div>
+                    <p className="text-foreground pt-1 group-hover:text-accent transition-colors duration-300">Conférences de professionnels invités et témoignages d'experts</p>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+          
+          <Card className="bg-gradient-card shadow-card p-8 rounded-xl card-hover backdrop-blur-sm">
             <CardContent className="p-0">
-              <h3 className="text-xl font-bold text-[#800020] mb-6">Encadrement et Supervision</h3>
+              <h3 className="text-2xl font-bold text-secondary mb-8 inline-block relative">
+                Encadrement et Supervision
+                <span className="absolute bottom-0 left-0 h-1 w-1/2 bg-gradient-to-r from-primary to-accent rounded-full"></span>
+              </h3>
               
-              <div className="space-y-8">
+              <div className="space-y-10">
                 <div>
-                  <h4 className="font-bold text-lg mb-3">Direction de Thèses et Mémoires</h4>
-                  <p className="mb-4 text-[#4a4a4a]">
+                  <h4 className="font-bold text-xl mb-4 text-foreground">Direction de Thèses et Mémoires</h4>
+                  <p className="mb-6 text-foreground leading-relaxed">
                     J'encadre régulièrement des étudiants de Master 2 dans leurs travaux de recherche et mémoires professionnels, 
-                    principalement dans les domaines du marketing expérientiel, du comportement du consommateur et des stratégies de communication.
+                    principalement dans les domaines de la vente B2B, des techniques de négociation et du management commercial.
                   </p>
-                  <p className="text-[#4a4a4a]">
+                  <p className="text-foreground font-medium mb-4">
                     Quelques exemples de sujets récemment encadrés:
                   </p>
-                  <ul className="mt-3 space-y-2 pl-6 list-disc">
-                    <li>"L'impact des stratégies de marketing sensoriel sur l'expérience client dans le secteur du luxe"</li>
-                    <li>"L'influence des réseaux sociaux sur les décisions d'achat des Millennials"</li>
-                    <li>"Stratégies d'innovation dans la distribution: étude comparative de cas européens"</li>
-                    <li>"L'expérience client omnicanale: défis et opportunités pour les retailers"</li>
+                  <ul className="mt-3 space-y-3">
+                    <li className="flex items-start group">
+                      <div className="mr-4 flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-primary/20 text-primary">
+                        <i className="fas fa-graduation-cap text-xs"></i>
+                      </div>
+                      <p className="text-foreground group-hover:text-accent transition-colors duration-300">"L'impact des compétences relationnelles sur la performance commerciale B2B"</p>
+                    </li>
+                    <li className="flex items-start group">
+                      <div className="mr-4 flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-primary/20 text-primary">
+                        <i className="fas fa-graduation-cap text-xs"></i>
+                      </div>
+                      <p className="text-foreground group-hover:text-accent transition-colors duration-300">"Les facteurs clés de succès dans la négociation commerciale complexe"</p>
+                    </li>
+                    <li className="flex items-start group">
+                      <div className="mr-4 flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-primary/20 text-primary">
+                        <i className="fas fa-graduation-cap text-xs"></i>
+                      </div>
+                      <p className="text-foreground group-hover:text-accent transition-colors duration-300">"L'évolution des méthodes de vente B2B à l'ère du digital"</p>
+                    </li>
+                    <li className="flex items-start group">
+                      <div className="mr-4 flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-primary/20 text-primary">
+                        <i className="fas fa-graduation-cap text-xs"></i>
+                      </div>
+                      <p className="text-foreground group-hover:text-accent transition-colors duration-300">"La gestion des équipes commerciales à distance: défis et solutions"</p>
+                    </li>
                   </ul>
                 </div>
                 
                 <div>
-                  <h4 className="font-bold text-lg mb-3">Activités de Tutorat</h4>
-                  <p className="text-[#4a4a4a]">
+                  <h4 className="font-bold text-xl mb-4 text-foreground">Activités de Tutorat</h4>
+                  <p className="text-foreground leading-relaxed">
                     Je supervise également des projets professionnels et des stages, assurant un lien entre la formation académique 
                     et le monde professionnel. Cette activité permet aux étudiants de développer leurs compétences pratiques 
-                    et de créer des connexions dans le milieu professionnel.
+                    et de créer des connexions dans le milieu professionnel, particulièrement dans le domaine de la vente et du développement commercial.
                   </p>
                 </div>
               </div>

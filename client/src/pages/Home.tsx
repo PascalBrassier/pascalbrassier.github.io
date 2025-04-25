@@ -11,10 +11,10 @@ const Home = () => {
     <>
       <Helmet>
         <title>Dr. Pascal Brassier | Academic Profile</title>
-        <meta name="description" content="Professional academic portfolio of Dr. Pascal Brassier, professor at ESC Clermont Business School, specialist in Marketing, Communication and Management." />
+        <meta name="description" content="Professional academic portfolio of Dr. Pascal Brassier, professor at Université Clermont Auvergne, specialist in B2B selling, negotiation and sales management." />
       </Helmet>
       <Header />
-      <main>
+      <main className="pt-20 md:pt-24">
         <HeroSection />
         <AboutSection />
         <TabsSection />

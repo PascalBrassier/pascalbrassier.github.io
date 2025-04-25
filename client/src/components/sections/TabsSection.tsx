@@ -87,14 +87,15 @@ const TabsSection = () => {
 
         {/* Research Tab Content */}
         <div className={activeTab === 'research' ? 'block' : 'hidden'}>
-          <h2 id="research" className="text-2xl md:text-3xl font-bold text-[#0a3d62] mb-8">Domaines de Recherche</h2>
+          <h2 id="research" className="text-2xl md:text-3xl font-bold text-secondary mb-8">Domaines de Recherche</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <div className="bg-gradient-card p-8 rounded-xl shadow-card card-hover">
               <h3 className="text-xl font-bold text-secondary mb-4">Vente B2B & Négociation</h3>
               <p className="mb-4 text-foreground leading-relaxed">
                 Mes recherches se concentrent sur les processus de vente et les techniques de négociation dans le contexte B2B, 
-                avec une attention particulière sur le développement des compétences commerciales et l'efficacité des stratégies de négociation.
+                avec une attention particulière sur le développement des compétences commerciales et leur évaluation. J'ai dirigé 
+                le programme de recherche-action P2C sur l'autoévaluation des compétences commerciales.
               </p>
               <div className="flex flex-wrap gap-2 mt-4">
                 <span className="bg-white/60 shadow-sm px-3 py-1 rounded-full text-sm text-foreground backdrop-blur-sm hover:shadow-md transition-all duration-300">Négociation commerciale</span>
@@ -104,15 +105,16 @@ const TabsSection = () => {
             </div>
             
             <div className="bg-gradient-card p-8 rounded-xl shadow-card card-hover">
-              <h3 className="text-xl font-bold text-secondary mb-4">Management Commercial</h3>
+              <h3 className="text-xl font-bold text-secondary mb-4">Communautés en ligne B2B</h3>
               <p className="mb-4 text-foreground leading-relaxed">
-                J'étudie les facteurs influençant la performance des équipes commerciales et les stratégies de management 
-                dans les organisations orientées vente, avec un intérêt particulier pour le développement du leadership commercial.
+                Je suis co-concepteur du Programme de recherche-action STAM (2019-2023) sur la création et l'animation de communautés 
+                en ligne B2B en métrologie industrielle. Ce projet interdisciplinaire associe des chercheurs en gestion et informatique 
+                et des acteurs industriels avec un budget de 1,7 M€.
               </p>
               <div className="flex flex-wrap gap-2 mt-4">
-                <span className="bg-white/60 shadow-sm px-3 py-1 rounded-full text-sm text-foreground backdrop-blur-sm hover:shadow-md transition-all duration-300">Leadership commercial</span>
-                <span className="bg-white/60 shadow-sm px-3 py-1 rounded-full text-sm text-foreground backdrop-blur-sm hover:shadow-md transition-all duration-300">Performance commerciale</span>
-                <span className="bg-white/60 shadow-sm px-3 py-1 rounded-full text-sm text-foreground backdrop-blur-sm hover:shadow-md transition-all duration-300">Coaching commercial</span>
+                <span className="bg-white/60 shadow-sm px-3 py-1 rounded-full text-sm text-foreground backdrop-blur-sm hover:shadow-md transition-all duration-300">Communautés B2B</span>
+                <span className="bg-white/60 shadow-sm px-3 py-1 rounded-full text-sm text-foreground backdrop-blur-sm hover:shadow-md transition-all duration-300">Marketing digital</span>
+                <span className="bg-white/60 shadow-sm px-3 py-1 rounded-full text-sm text-foreground backdrop-blur-sm hover:shadow-md transition-all duration-300">Social selling</span>
               </div>
             </div>
           </div>

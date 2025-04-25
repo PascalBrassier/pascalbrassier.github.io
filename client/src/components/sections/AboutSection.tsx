@@ -21,11 +21,12 @@ const AboutSection = () => {
               <div className="w-full">
                 <h3 className="text-2xl font-bold text-secondary mb-6">Profil Professionnel</h3>
                 <p className="mb-8 text-foreground leading-relaxed">
-                  Je suis Maître de Conférences en Sciences de Gestion à l'Université Clermont Auvergne depuis 2013. 
-                  Mon parcours académique et professionnel est orienté vers la recherche et l'enseignement 
-                  dans les domaines de la vente B2B, des techniques de négociation et du management commercial. 
-                  Je m'intéresse particulièrement au développement des compétences commerciales, aux stratégies de négociation 
-                  et à la gestion de la relation client dans les contextes B2B.
+                  Je suis Maître de Conférences en Sciences de Gestion à l'Université Clermont Auvergne depuis 2013, 
+                  actuellement rattaché à l'IAE Clermont Auvergne. Mon parcours académique et professionnel est orienté 
+                  vers la recherche et l'enseignement dans les domaines de la vente B2B, des techniques de négociation 
+                  et du management commercial. Avec une Habilitation à Diriger des Recherches (HDR) obtenue en 2024,
+                  je supervise désormais des travaux doctoraux et dirige des projets de recherche en lien avec le 
+                  développement des compétences commerciales et les stratégies de vente B2B.
                 </p>
                 
                 <h3 className="text-2xl font-bold text-secondary mb-6">Formation</h3>
@@ -35,8 +36,8 @@ const AboutSection = () => {
                       <i className="fas fa-graduation-cap text-white"></i>
                     </div>
                     <div>
-                      <p className="font-semibold text-lg">Doctorat en Sciences de Gestion</p>
-                      <p className="text-muted-foreground">Université d'Auvergne - Clermont-Ferrand</p>
+                      <p className="font-semibold text-lg">Habilitation à Diriger des Recherches (HDR) en Sciences de Gestion</p>
+                      <p className="text-muted-foreground">Université Clermont Auvergne, 2024</p>
                     </div>
                   </li>
                   <li className="flex items-center group">
@@ -44,8 +45,8 @@ const AboutSection = () => {
                       <i className="fas fa-graduation-cap text-white"></i>
                     </div>
                     <div>
-                      <p className="font-semibold text-lg">DEA Gestion Socio-Economique</p>
-                      <p className="text-muted-foreground">IAE Lyon</p>
+                      <p className="font-semibold text-lg">Doctorat ès Sciences de Gestion</p>
+                      <p className="text-muted-foreground">Université d'Auvergne, 2004 - Mention Très Honorable, avec Félicitations du Jury</p>
                     </div>
                   </li>
                   <li className="flex items-center group">
@@ -53,25 +54,31 @@ const AboutSection = () => {
                       <i className="fas fa-graduation-cap text-white"></i>
                     </div>
                     <div>
-                      <p className="font-semibold text-lg">DESCAF</p>
-                      <p className="text-muted-foreground">ESC Clermont Business School</p>
+                      <p className="font-semibold text-lg">D.E.A. Sciences de Gestion</p>
+                      <p className="text-muted-foreground">Université d'Auvergne, 1996 - Mention Très Bien, Rang : 1er</p>
                     </div>
                   </li>
                 </ul>
                 
-                <h3 className="text-2xl font-bold text-secondary mb-6">Affiliations</h3>
+                <h3 className="text-2xl font-bold text-secondary mb-6">Affiliations & Organisations</h3>
                 <div className="flex flex-wrap gap-4 mb-6">
                   <span className="inline-block bg-white/60 backdrop-blur-sm px-5 py-3 rounded-full text-foreground shadow-sm hover:shadow-md transition-all duration-300">
-                    <i className="fas fa-building mr-2 text-primary"></i>Université Clermont Auvergne
+                    <i className="fas fa-building mr-2 text-primary"></i>IAE Clermont Auvergne (UCA)
                   </span>
                   <span className="inline-block bg-white/60 backdrop-blur-sm px-5 py-3 rounded-full text-foreground shadow-sm hover:shadow-md transition-all duration-300">
                     <i className="fas fa-flask mr-2 text-accent"></i>CleRMa (Clermont Recherche Management)
                   </span>
                   <span className="inline-block bg-white/60 backdrop-blur-sm px-5 py-3 rounded-full text-foreground shadow-sm hover:shadow-md transition-all duration-300">
-                    <i className="fas fa-users mr-2 text-secondary"></i>Association Française de Marketing (AFM)
+                    <i className="fas fa-users mr-2 text-secondary"></i>AFM (Association Française de Marketing)
                   </span>
                   <span className="inline-block bg-white/60 backdrop-blur-sm px-5 py-3 rounded-full text-foreground shadow-sm hover:shadow-md transition-all duration-300">
-                    <i className="fas fa-handshake mr-2 text-primary"></i>Association Française des Sciences de Gestion (AFSG)
+                    <i className="fas fa-handshake mr-2 text-primary"></i>GSSI (Global Sales Science Institute)
+                  </span>
+                  <span className="inline-block bg-white/60 backdrop-blur-sm px-5 py-3 rounded-full text-foreground shadow-sm hover:shadow-md transition-all duration-300">
+                    <i className="fas fa-globe-europe mr-2 text-secondary"></i>EASB (European Academic Sales Board)
+                  </span>
+                  <span className="inline-block bg-white/60 backdrop-blur-sm px-5 py-3 rounded-full text-foreground shadow-sm hover:shadow-md transition-all duration-300">
+                    <i className="fas fa-chart-line mr-2 text-accent"></i>EMAC (European Marketing Academy)
                   </span>
                 </div>
               </div>
@@ -86,7 +93,11 @@ const AboutSection = () => {
                 <i className="fas fa-chalkboard-teacher text-white text-2xl"></i>
               </div>
               <h3 className="text-xl font-bold text-center mb-4">Enseignement</h3>
-              <p className="text-center text-muted-foreground">Plus de 20 ans d'expérience dans l'enseignement de la vente B2B, des techniques de négociation et du management commercial.</p>
+              <p className="text-center text-muted-foreground">
+                Directeur du Master 2 Direction Commerciale & International Business (2017-2024), 
+                enseignement en sales management, négociation commerciale, et développement commercial international.
+                Professeur invité dans 12 universités à l'international.
+              </p>
             </CardContent>
           </Card>
           
@@ -96,17 +107,25 @@ const AboutSection = () => {
                 <i className="fas fa-search text-white text-2xl"></i>
               </div>
               <h3 className="text-xl font-bold text-center mb-4">Recherche</h3>
-              <p className="text-center text-muted-foreground">Publications dans des revues académiques sur les compétences de vente, les processus de négociation et les stratégies commerciales B2B.</p>
+              <p className="text-center text-muted-foreground">
+                Direction de programmes de recherche-action (STAM, P2C) et co-encadrement doctoral
+                portant sur les communautés en ligne B2B, compétences commerciales et négociation.
+                Publications dans des revues académiques internationales.
+              </p>
             </CardContent>
           </Card>
           
           <Card className="bg-gradient-card rounded-xl shadow-card p-8 card-hover animate-slide-up delay-200 backdrop-blur-sm transform transition-all duration-500 hover:-translate-y-2">
             <CardContent className="p-0">
               <div className="rounded-full bg-gradient w-16 h-16 flex items-center justify-center mx-auto mb-6 shadow-md">
-                <i className="fas fa-handshake text-white text-2xl"></i>
+                <i className="fas fa-award text-white text-2xl"></i>
               </div>
-              <h3 className="text-xl font-bold text-center mb-4">Consultation</h3>
-              <p className="text-center text-muted-foreground">Collaboration avec des entreprises pour des projets de développement commercial, formation à la négociation et optimisation des processus de vente.</p>
+              <h3 className="text-xl font-bold text-center mb-4">Responsabilités</h3>
+              <p className="text-center text-muted-foreground">
+                Chargé de Mission Compétences & Learning pour l'IDEM-UCA.
+                Responsable du Standard 5 'AOL' pour l'accréditation AACSB.
+                Ancien adjoint du Directeur de l'IAE pour l'accréditation AACSB (2018-2022).
+              </p>
             </CardContent>
           </Card>
         </div>

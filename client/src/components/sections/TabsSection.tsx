@@ -274,39 +274,40 @@ const TabsSection = () => {
                   <span className="absolute bottom-0 left-0 h-1 w-1/2 bg-gradient-to-r from-primary to-accent rounded-full"></span>
                 </h3>
                 <p className="mb-8 text-foreground leading-relaxed">
-                  J'adopte une approche pédagogique mixte qui combine théorie et pratique, favorisant l'apprentissage actif 
-                  et le développement des compétences professionnelles des étudiants.
+                  J'adopte une approche par compétences en tant que Chargé de Mission Compétences & Learning pour l'IDEM-UCA,
+                  combinant théorie et pratique avec une forte orientation professionnelle. Je privilégie l'apprentissage actif et 
+                  l'utilisation d'outils numériques innovants.
                 </p>
                 <ul className="space-y-4">
                   <li className="flex items-start group">
                     <div className="mr-4 flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-gradient shadow-sm group-hover:shadow-md text-white transition-all duration-300">
                       <i className="fas fa-check text-sm"></i>
                     </div>
-                    <p className="text-foreground pt-1 group-hover:text-accent transition-colors duration-300">Études de cas réels et analyses sectorielles</p>
+                    <p className="text-foreground pt-1 group-hover:text-accent transition-colors duration-300">Enseignement bilingue français/anglais (65% / 35%)</p>
                   </li>
                   <li className="flex items-start group">
                     <div className="mr-4 flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-gradient shadow-sm group-hover:shadow-md text-white transition-all duration-300">
                       <i className="fas fa-check text-sm"></i>
                     </div>
-                    <p className="text-foreground pt-1 group-hover:text-accent transition-colors duration-300">Projets de groupe avec des entreprises partenaires</p>
+                    <p className="text-foreground pt-1 group-hover:text-accent transition-colors duration-300">Approche par compétences (APC) et certification AACSB</p>
                   </li>
                   <li className="flex items-start group">
                     <div className="mr-4 flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-gradient shadow-sm group-hover:shadow-md text-white transition-all duration-300">
                       <i className="fas fa-check text-sm"></i>
                     </div>
-                    <p className="text-foreground pt-1 group-hover:text-accent transition-colors duration-300">Simulations et jeux de rôle pour développer des compétences pratiques</p>
+                    <p className="text-foreground pt-1 group-hover:text-accent transition-colors duration-300">Simulations de négociation commerciale et jeux de rôle</p>
                   </li>
                   <li className="flex items-start group">
                     <div className="mr-4 flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-gradient shadow-sm group-hover:shadow-md text-white transition-all duration-300">
                       <i className="fas fa-check text-sm"></i>
                     </div>
-                    <p className="text-foreground pt-1 group-hover:text-accent transition-colors duration-300">Intégration des technologies numériques et des médias sociaux</p>
+                    <p className="text-foreground pt-1 group-hover:text-accent transition-colors duration-300">Formation continue pour professionnels (plusieurs milliers de cadres formés)</p>
                   </li>
                   <li className="flex items-start group">
                     <div className="mr-4 flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-gradient shadow-sm group-hover:shadow-md text-white transition-all duration-300">
                       <i className="fas fa-check text-sm"></i>
                     </div>
-                    <p className="text-foreground pt-1 group-hover:text-accent transition-colors duration-300">Conférences de professionnels invités et témoignages d'experts</p>
+                    <p className="text-foreground pt-1 group-hover:text-accent transition-colors duration-300">Organisation de conférences pédagogiques internationales (Shanghai, Utah Valley)</p>
                   </li>
                 </ul>
               </CardContent>
@@ -322,49 +323,85 @@ const TabsSection = () => {
               
               <div className="space-y-10">
                 <div>
-                  <h4 className="font-bold text-xl mb-4 text-foreground">Direction de Thèses et Mémoires</h4>
+                  <h4 className="font-bold text-xl mb-4 text-foreground">Encadrement doctoral</h4>
                   <p className="mb-6 text-foreground leading-relaxed">
-                    J'encadre régulièrement des étudiants de Master 2 dans leurs travaux de recherche et mémoires professionnels, 
-                    principalement dans les domaines de la vente B2B, des techniques de négociation et du management commercial.
+                    Suite à l'obtention de mon HDR en 2024, je peux désormais diriger des travaux doctoraux. Je co-encadre déjà:
                   </p>
-                  <p className="text-foreground font-medium mb-4">
-                    Quelques exemples de sujets récemment encadrés:
+                  <ul className="mt-3 space-y-5">
+                    <li className="flex items-start group">
+                      <div className="mr-4 flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-primary/20 text-primary">
+                        <i className="fas fa-user-graduate text-xs"></i>
+                      </div>
+                      <div>
+                        <p className="text-foreground font-medium group-hover:text-accent transition-colors duration-300">
+                          DAN Serge (2019-2024): Co-encadrement avec Pr. Pascal LIÈVRE
+                        </p>
+                        <p className="text-foreground text-sm">
+                          Programme STAM, communauté en ligne B2B en métrologie industrielle. 50% d'encadrement, 5 communications réalisées.
+                        </p>
+                      </div>
+                    </li>
+                    <li className="flex items-start group">
+                      <div className="mr-4 flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-primary/20 text-primary">
+                        <i className="fas fa-user-graduate text-xs"></i>
+                      </div>
+                      <div>
+                        <p className="text-foreground font-medium group-hover:text-accent transition-colors duration-300">
+                          Membre du jury de thèse de doctorat (Juin 2024)
+                        </p>
+                        <p className="text-foreground text-sm">
+                          GUIGUARD Laure, Université Lyon 3, Direction: Pr. Régine Vanheems et Catherine Pardo.
+                        </p>
+                      </div>
+                    </li>
+                    <li className="flex items-start group">
+                      <div className="mr-4 flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-primary/20 text-primary">
+                        <i className="fas fa-user-graduate text-xs"></i>
+                      </div>
+                      <div>
+                        <p className="text-foreground font-medium group-hover:text-accent transition-colors duration-300">
+                          Comités de suivi doctoral (2021-2023)
+                        </p>
+                        <p className="text-foreground text-sm">
+                          GUIGUARD Laure (Lyon 3) et KHRIFECH Salma (EM Normandie)
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h4 className="font-bold text-xl mb-4 text-foreground">Encadrement de masters</h4>
+                  <p className="text-foreground leading-relaxed mb-4">
+                    Je dirige depuis 2017 le Master 2 Direction Commerciale & International Business, un programme en alternance 
+                    bilingue français-anglais. J'encadre régulièrement des mémoires-recherche et des contrats d'alternance.
                   </p>
                   <ul className="mt-3 space-y-3">
                     <li className="flex items-start group">
                       <div className="mr-4 flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-primary/20 text-primary">
                         <i className="fas fa-graduation-cap text-xs"></i>
                       </div>
-                      <p className="text-foreground group-hover:text-accent transition-colors duration-300">"L'impact des compétences relationnelles sur la performance commerciale B2B"</p>
+                      <p className="text-foreground group-hover:text-accent transition-colors duration-300">
+                        <strong>MESFIOUI Meriem</strong> (2017-2018): "L'animation des communautés en ligne B2B" - Doctorante au CleRMa
+                      </p>
                     </li>
                     <li className="flex items-start group">
                       <div className="mr-4 flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-primary/20 text-primary">
                         <i className="fas fa-graduation-cap text-xs"></i>
                       </div>
-                      <p className="text-foreground group-hover:text-accent transition-colors duration-300">"Les facteurs clés de succès dans la négociation commerciale complexe"</p>
+                      <p className="text-foreground group-hover:text-accent transition-colors duration-300">
+                        12-15 étudiants de M2 par an en contrats d'alternance et de stage avec problématique de recherche
+                      </p>
                     </li>
                     <li className="flex items-start group">
                       <div className="mr-4 flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-primary/20 text-primary">
                         <i className="fas fa-graduation-cap text-xs"></i>
                       </div>
-                      <p className="text-foreground group-hover:text-accent transition-colors duration-300">"L'évolution des méthodes de vente B2B à l'ère du digital"</p>
-                    </li>
-                    <li className="flex items-start group">
-                      <div className="mr-4 flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-primary/20 text-primary">
-                        <i className="fas fa-graduation-cap text-xs"></i>
-                      </div>
-                      <p className="text-foreground group-hover:text-accent transition-colors duration-300">"La gestion des équipes commerciales à distance: défis et solutions"</p>
+                      <p className="text-foreground group-hover:text-accent transition-colors duration-300">
+                        12-14 projets de recherche M1 par an dans le cadre du cours "Initiation à la recherche" (format article)
+                      </p>
                     </li>
                   </ul>
-                </div>
-                
-                <div>
-                  <h4 className="font-bold text-xl mb-4 text-foreground">Activités de Tutorat</h4>
-                  <p className="text-foreground leading-relaxed">
-                    Je supervise également des projets professionnels et des stages, assurant un lien entre la formation académique 
-                    et le monde professionnel. Cette activité permet aux étudiants de développer leurs compétences pratiques 
-                    et de créer des connexions dans le milieu professionnel, particulièrement dans le domaine de la vente et du développement commercial.
-                  </p>
                 </div>
               </div>
             </CardContent>

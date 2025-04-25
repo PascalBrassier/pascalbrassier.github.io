@@ -39,28 +39,48 @@ const TabsSection = () => {
   };
   
   return (
-    <section id="tabs-section" className="py-16 bg-white">
-      <div className="container">
-        <div className="flex flex-wrap border-b border-gray-200 mb-8">
+    <section id="tabs-section" className="py-20 bg-gradient-light relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute top-0 left-0 w-full h-full opacity-5 bg-noise-pattern"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-br from-secondary/20 to-transparent rounded-full filter blur-3xl -mr-48 -mb-48"></div>
+      
+      <div className="container relative z-10">
+        <div className="text-center mb-10 animate-fade-in">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <span className="text-gradient">Travaux & Activités</span>
+          </h2>
+          <div className="section-divider"></div>
+        </div>
+        
+        <div className="flex flex-wrap justify-center bg-white/60 backdrop-blur-sm rounded-lg shadow-sm mb-12 max-w-3xl mx-auto">
           <Button 
             variant="ghost" 
-            className={`px-6 py-3 font-medium text-lg border-b-2 rounded-none ${activeTab === 'research' ? 'border-[#0a3d62] text-[#0a3d62]' : 'border-transparent text-[#4a4a4a] hover:text-[#0a3d62]'}`}
+            className={`nav-item px-6 py-4 font-medium text-lg ${activeTab === 'research' 
+              ? 'text-primary font-semibold' 
+              : 'text-foreground opacity-80 hover:opacity-100'}`}
             onClick={() => handleTabClick('research')}
           >
+            <i className="fas fa-flask mr-2"></i>
             Recherche
           </Button>
           <Button 
             variant="ghost" 
-            className={`px-6 py-3 font-medium text-lg border-b-2 rounded-none ${activeTab === 'publications' ? 'border-[#0a3d62] text-[#0a3d62]' : 'border-transparent text-[#4a4a4a] hover:text-[#0a3d62]'}`}
+            className={`nav-item px-6 py-4 font-medium text-lg ${activeTab === 'publications' 
+              ? 'text-primary font-semibold' 
+              : 'text-foreground opacity-80 hover:opacity-100'}`}
             onClick={() => handleTabClick('publications')}
           >
+            <i className="fas fa-book mr-2"></i>
             Publications
           </Button>
           <Button 
             variant="ghost" 
-            className={`px-6 py-3 font-medium text-lg border-b-2 rounded-none ${activeTab === 'teaching' ? 'border-[#0a3d62] text-[#0a3d62]' : 'border-transparent text-[#4a4a4a] hover:text-[#0a3d62]'}`}
+            className={`nav-item px-6 py-4 font-medium text-lg ${activeTab === 'teaching' 
+              ? 'text-primary font-semibold' 
+              : 'text-foreground opacity-80 hover:opacity-100'}`}
             onClick={() => handleTabClick('teaching')}
           >
+            <i className="fas fa-chalkboard-teacher mr-2"></i>
             Enseignement
           </Button>
         </div>
@@ -70,48 +90,51 @@ const TabsSection = () => {
           <h2 id="research" className="text-2xl md:text-3xl font-bold text-[#0a3d62] mb-8">Domaines de Recherche</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <div className="bg-[#f5f5f5] p-6 rounded-lg">
-              <h3 className="text-xl font-bold text-[#800020] mb-4">Marketing Expérientiel</h3>
-              <p className="mb-4 text-[#4a4a4a]">
-                Mes recherches se concentrent sur l'expérience client et les stratégies de marketing expérientiel, 
-                en particulier dans les contextes de services et du retail.
+            <div className="bg-gradient-card p-8 rounded-xl shadow-card card-hover">
+              <h3 className="text-xl font-bold text-secondary mb-4">Vente B2B & Négociation</h3>
+              <p className="mb-4 text-foreground leading-relaxed">
+                Mes recherches se concentrent sur les processus de vente et les techniques de négociation dans le contexte B2B, 
+                avec une attention particulière sur le développement des compétences commerciales et l'efficacité des stratégies de négociation.
               </p>
               <div className="flex flex-wrap gap-2 mt-4">
-                <span className="bg-white px-3 py-1 rounded-full text-sm text-[#4a4a4a]">Expérience client</span>
-                <span className="bg-white px-3 py-1 rounded-full text-sm text-[#4a4a4a]">Satisfaction</span>
-                <span className="bg-white px-3 py-1 rounded-full text-sm text-[#4a4a4a]">Retail</span>
+                <span className="bg-white/60 shadow-sm px-3 py-1 rounded-full text-sm text-foreground backdrop-blur-sm hover:shadow-md transition-all duration-300">Négociation commerciale</span>
+                <span className="bg-white/60 shadow-sm px-3 py-1 rounded-full text-sm text-foreground backdrop-blur-sm hover:shadow-md transition-all duration-300">Compétences de vente</span>
+                <span className="bg-white/60 shadow-sm px-3 py-1 rounded-full text-sm text-foreground backdrop-blur-sm hover:shadow-md transition-all duration-300">Relation client B2B</span>
               </div>
             </div>
             
-            <div className="bg-[#f5f5f5] p-6 rounded-lg">
-              <h3 className="text-xl font-bold text-[#800020] mb-4">Comportement du Consommateur</h3>
-              <p className="mb-4 text-[#4a4a4a]">
-                J'étudie les facteurs influençant les décisions d'achat et la satisfaction des consommateurs, 
-                avec un intérêt particulier pour les dimensions expérientielles et émotionnelles.
+            <div className="bg-gradient-card p-8 rounded-xl shadow-card card-hover">
+              <h3 className="text-xl font-bold text-secondary mb-4">Management Commercial</h3>
+              <p className="mb-4 text-foreground leading-relaxed">
+                J'étudie les facteurs influençant la performance des équipes commerciales et les stratégies de management 
+                dans les organisations orientées vente, avec un intérêt particulier pour le développement du leadership commercial.
               </p>
               <div className="flex flex-wrap gap-2 mt-4">
-                <span className="bg-white px-3 py-1 rounded-full text-sm text-[#4a4a4a]">Psychologie</span>
-                <span className="bg-white px-3 py-1 rounded-full text-sm text-[#4a4a4a]">Décision d'achat</span>
-                <span className="bg-white px-3 py-1 rounded-full text-sm text-[#4a4a4a]">Émotions</span>
+                <span className="bg-white/60 shadow-sm px-3 py-1 rounded-full text-sm text-foreground backdrop-blur-sm hover:shadow-md transition-all duration-300">Leadership commercial</span>
+                <span className="bg-white/60 shadow-sm px-3 py-1 rounded-full text-sm text-foreground backdrop-blur-sm hover:shadow-md transition-all duration-300">Performance commerciale</span>
+                <span className="bg-white/60 shadow-sm px-3 py-1 rounded-full text-sm text-foreground backdrop-blur-sm hover:shadow-md transition-all duration-300">Coaching commercial</span>
               </div>
             </div>
           </div>
           
-          <Card className="bg-[#f5f5f5] p-8 rounded-lg">
+          <Card className="bg-gradient-card shadow-card p-8 rounded-xl card-hover backdrop-blur-sm">
             <CardContent className="p-0">
-              <h3 className="text-xl font-bold text-[#800020] mb-6">Projets de Recherche Actuels</h3>
+              <h3 className="text-2xl font-bold text-secondary mb-8 inline-block relative">
+                Projets de Recherche Actuels
+                <span className="absolute bottom-0 left-0 h-1 w-1/2 bg-gradient-to-r from-primary to-accent rounded-full"></span>
+              </h3>
               
-              <div className="space-y-6">
+              <div className="space-y-8">
                 {researchProjects.map((project, index) => (
-                  <div className="flex" key={index}>
+                  <div className="flex group" key={index}>
                     <div className="mr-6 flex-shrink-0 flex items-start mt-1">
-                      <div className="w-8 h-8 rounded-full bg-[#0a3d62] text-white flex items-center justify-center">
-                        <i className="fas fa-flask"></i>
+                      <div className="w-12 h-12 rounded-lg bg-gradient shadow-md text-white flex items-center justify-center group-hover:scale-110 transition-all duration-300">
+                        <i className="fas fa-flask text-lg"></i>
                       </div>
                     </div>
                     <div>
-                      <h4 className="font-bold text-lg mb-1">{project.title}</h4>
-                      <p className="text-[#4a4a4a]">{project.description}</p>
+                      <h4 className="font-bold text-xl mb-2 group-hover:text-accent transition-colors duration-300">{project.title}</h4>
+                      <p className="text-foreground leading-relaxed">{project.description}</p>
                     </div>
                   </div>
                 ))}

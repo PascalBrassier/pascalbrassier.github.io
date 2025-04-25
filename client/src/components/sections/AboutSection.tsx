@@ -2,63 +2,76 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-16 bg-[#f5f5f5]">
-      <div className="container">
-        <h2 className="text-2xl md:text-3xl font-bold text-[#0a3d62] mb-10 text-center">À propos</h2>
+    <section id="about" className="py-20 bg-gradient-light relative overflow-hidden">
+      {/* Decorative background elements */}
+      <div className="absolute top-0 left-0 w-full h-full opacity-5 bg-noise-pattern"></div>
+      <div className="absolute top-40 right-0 w-96 h-96 bg-gradient-to-tl from-primary/20 to-transparent rounded-full filter blur-3xl"></div>
+      
+      <div className="container relative z-10">
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <span className="text-gradient">À propos</span>
+          </h2>
+          <div className="section-divider"></div>
+        </div>
         
-        <Card className="bg-white rounded-lg shadow-md p-8 mb-12">
+        <Card className="bg-gradient-card rounded-xl shadow-card p-8 mb-16 card-hover animate-slide-up backdrop-blur-sm">
           <CardContent className="p-0">
             <div className="flex flex-col md:flex-row">
               <div className="w-full">
-                <h3 className="text-xl font-bold text-[#800020] mb-4">Profil Professionnel</h3>
-                <p className="mb-6 text-[#4a4a4a]">
-                  Je suis Maître de Conférences en Sciences de Gestion à l'ESC Clermont Business School depuis 2005. 
+                <h3 className="text-2xl font-bold text-secondary mb-6">Profil Professionnel</h3>
+                <p className="mb-8 text-foreground leading-relaxed">
+                  Je suis Maître de Conférences en Sciences de Gestion à l'Université Clermont Auvergne depuis 2013. 
                   Mon parcours académique et professionnel est orienté vers la recherche et l'enseignement 
-                  dans les domaines du marketing, de la communication et du management. 
-                  Je m'intéresse particulièrement au marketing expérientiel, à l'innovation et au comportement des consommateurs.
+                  dans les domaines de la vente B2B, des techniques de négociation et du management commercial. 
+                  Je m'intéresse particulièrement au développement des compétences commerciales, aux stratégies de négociation 
+                  et à la gestion de la relation client dans les contextes B2B.
                 </p>
                 
-                <h3 className="text-xl font-bold text-[#800020] mb-4">Formation</h3>
-                <ul className="mb-6 space-y-3">
-                  <li className="flex">
-                    <div className="mr-4 flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-[#0a3d62] text-white">
-                      <i className="fas fa-graduation-cap"></i>
+                <h3 className="text-2xl font-bold text-secondary mb-6">Formation</h3>
+                <ul className="mb-8 space-y-5">
+                  <li className="flex items-center group">
+                    <div className="mr-6 flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-gradient shadow-md group-hover:shadow-lg transition-all duration-300">
+                      <i className="fas fa-graduation-cap text-white"></i>
                     </div>
                     <div>
-                      <p className="font-semibold">Doctorat en Sciences de Gestion</p>
-                      <p className="text-sm text-[#4a4a4a]">Université d'Auvergne - Clermont-Ferrand</p>
+                      <p className="font-semibold text-lg">Doctorat en Sciences de Gestion</p>
+                      <p className="text-muted-foreground">Université d'Auvergne - Clermont-Ferrand</p>
                     </div>
                   </li>
-                  <li className="flex">
-                    <div className="mr-4 flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-[#0a3d62] text-white">
-                      <i className="fas fa-graduation-cap"></i>
+                  <li className="flex items-center group">
+                    <div className="mr-6 flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-gradient shadow-md group-hover:shadow-lg transition-all duration-300">
+                      <i className="fas fa-graduation-cap text-white"></i>
                     </div>
                     <div>
-                      <p className="font-semibold">DEA Gestion Socio-Economique</p>
-                      <p className="text-sm text-[#4a4a4a]">IAE Lyon</p>
+                      <p className="font-semibold text-lg">DEA Gestion Socio-Economique</p>
+                      <p className="text-muted-foreground">IAE Lyon</p>
                     </div>
                   </li>
-                  <li className="flex">
-                    <div className="mr-4 flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-[#0a3d62] text-white">
-                      <i className="fas fa-graduation-cap"></i>
+                  <li className="flex items-center group">
+                    <div className="mr-6 flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-gradient shadow-md group-hover:shadow-lg transition-all duration-300">
+                      <i className="fas fa-graduation-cap text-white"></i>
                     </div>
                     <div>
-                      <p className="font-semibold">DESCAF</p>
-                      <p className="text-sm text-[#4a4a4a]">ESC Clermont Business School</p>
+                      <p className="font-semibold text-lg">DESCAF</p>
+                      <p className="text-muted-foreground">ESC Clermont Business School</p>
                     </div>
                   </li>
                 </ul>
                 
-                <h3 className="text-xl font-bold text-[#800020] mb-4">Affiliations</h3>
+                <h3 className="text-2xl font-bold text-secondary mb-6">Affiliations</h3>
                 <div className="flex flex-wrap gap-4 mb-6">
-                  <span className="inline-block bg-[#f5f5f5] px-4 py-2 rounded-full text-[#2c3e50] text-sm">
-                    <i className="fas fa-building mr-2"></i>ESC Clermont Business School
+                  <span className="inline-block bg-white/60 backdrop-blur-sm px-5 py-3 rounded-full text-foreground shadow-sm hover:shadow-md transition-all duration-300">
+                    <i className="fas fa-building mr-2 text-primary"></i>Université Clermont Auvergne
                   </span>
-                  <span className="inline-block bg-[#f5f5f5] px-4 py-2 rounded-full text-[#2c3e50] text-sm">
-                    <i className="fas fa-flask mr-2"></i>CleRMa (Clermont Recherche Management)
+                  <span className="inline-block bg-white/60 backdrop-blur-sm px-5 py-3 rounded-full text-foreground shadow-sm hover:shadow-md transition-all duration-300">
+                    <i className="fas fa-flask mr-2 text-accent"></i>CleRMa (Clermont Recherche Management)
                   </span>
-                  <span className="inline-block bg-[#f5f5f5] px-4 py-2 rounded-full text-[#2c3e50] text-sm">
-                    <i className="fas fa-users mr-2"></i>Association Française du Marketing
+                  <span className="inline-block bg-white/60 backdrop-blur-sm px-5 py-3 rounded-full text-foreground shadow-sm hover:shadow-md transition-all duration-300">
+                    <i className="fas fa-users mr-2 text-secondary"></i>Association Française de Marketing (AFM)
+                  </span>
+                  <span className="inline-block bg-white/60 backdrop-blur-sm px-5 py-3 rounded-full text-foreground shadow-sm hover:shadow-md transition-all duration-300">
+                    <i className="fas fa-handshake mr-2 text-primary"></i>Association Française des Sciences de Gestion (AFSG)
                   </span>
                 </div>
               </div>
@@ -66,34 +79,34 @@ const AboutSection = () => {
           </CardContent>
         </Card>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <Card className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <Card className="bg-gradient-card rounded-xl shadow-card p-8 card-hover animate-slide-up backdrop-blur-sm transform transition-all duration-500 hover:-translate-y-2">
             <CardContent className="p-0">
-              <div className="text-4xl text-[#800020] mb-4 flex justify-center">
-                <i className="fas fa-chalkboard-teacher"></i>
+              <div className="rounded-full bg-gradient w-16 h-16 flex items-center justify-center mx-auto mb-6 shadow-md">
+                <i className="fas fa-chalkboard-teacher text-white text-2xl"></i>
               </div>
               <h3 className="text-xl font-bold text-center mb-4">Enseignement</h3>
-              <p className="text-center text-[#4a4a4a]">Plus de 20 ans d'expérience dans l'enseignement du marketing et de la communication à différents niveaux.</p>
+              <p className="text-center text-muted-foreground">Plus de 20 ans d'expérience dans l'enseignement de la vente B2B, des techniques de négociation et du management commercial.</p>
             </CardContent>
           </Card>
           
-          <Card className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+          <Card className="bg-gradient-card rounded-xl shadow-card p-8 card-hover animate-slide-up delay-100 backdrop-blur-sm transform transition-all duration-500 hover:-translate-y-2">
             <CardContent className="p-0">
-              <div className="text-4xl text-[#800020] mb-4 flex justify-center">
-                <i className="fas fa-search"></i>
+              <div className="rounded-full bg-gradient w-16 h-16 flex items-center justify-center mx-auto mb-6 shadow-md">
+                <i className="fas fa-search text-white text-2xl"></i>
               </div>
               <h3 className="text-xl font-bold text-center mb-4">Recherche</h3>
-              <p className="text-center text-[#4a4a4a]">Publications dans des revues académiques sur le marketing expérientiel et le comportement des consommateurs.</p>
+              <p className="text-center text-muted-foreground">Publications dans des revues académiques sur les compétences de vente, les processus de négociation et les stratégies commerciales B2B.</p>
             </CardContent>
           </Card>
           
-          <Card className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+          <Card className="bg-gradient-card rounded-xl shadow-card p-8 card-hover animate-slide-up delay-200 backdrop-blur-sm transform transition-all duration-500 hover:-translate-y-2">
             <CardContent className="p-0">
-              <div className="text-4xl text-[#800020] mb-4 flex justify-center">
-                <i className="fas fa-handshake"></i>
+              <div className="rounded-full bg-gradient w-16 h-16 flex items-center justify-center mx-auto mb-6 shadow-md">
+                <i className="fas fa-handshake text-white text-2xl"></i>
               </div>
               <h3 className="text-xl font-bold text-center mb-4">Consultation</h3>
-              <p className="text-center text-[#4a4a4a]">Collaboration avec des entreprises pour des projets de marketing, d'innovation et de développement stratégique.</p>
+              <p className="text-center text-muted-foreground">Collaboration avec des entreprises pour des projets de développement commercial, formation à la négociation et optimisation des processus de vente.</p>
             </CardContent>
           </Card>
         </div>

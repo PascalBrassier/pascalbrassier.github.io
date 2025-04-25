@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 20%;
+
+    --primary: 215 83% 21%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 87% 25%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 20%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 89%;
+    --input: 0 0% 89%;
+    --ring: 0 0% 70%;
+
+    --radius: 0.5rem;
+
+    /* Custom colors */
+    --academic-blue: 215 83% 21%;
+    --academic-burgundy: 345 100% 25%;
+    --academic-light: 0 0% 96%;
+    --academic-gray: 0 0% 29%;
+    --academic-dark: 210 29% 24%;
+  }
+  
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-[#f5f5f5] text-[#333] font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-4 md:px-8 mx-auto;
+  }
+
+  .tab-content {
+    @apply hidden;
+  }
+
+  .tab-content.active {
+    @apply block;
+  }
+
+  .publication-item:not(:last-child) {
+    @apply border-b border-gray-200;
+  }
+}

@@ -30,3 +30,9 @@ export default defineConfig({
     emptyOutDir: true,
   },
 });
+// Ajoutez cette configuration pour GitHub Pages
+base: "/", // Si vous utilisez un domaine personnalisé
+build: {
+  outDir: "dist",
+  emptyOutDir: true
+}
